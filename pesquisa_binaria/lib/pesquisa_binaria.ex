@@ -4,7 +4,7 @@ defmodule PesquisaBinaria do
   end
 
   def search(_list, _value) do
-    {:error, :not_found}
+    {:error, :invalid_list}
   end
 
   defp do_search(_list, _value, low, high) when low > high do
