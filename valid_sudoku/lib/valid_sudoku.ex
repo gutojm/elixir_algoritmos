@@ -56,8 +56,8 @@ defmodule ValidSudoku do
     true
   end
 
-  defp unique?([h|t], _) do
-    filled_cells = Enum.filter(h, &(&1 != ?.))
+  defp unique?([h|t], true) do
+    filled_cells = Enum.filter(h, &(&1 != "."))
     result = Enum.uniq(filled_cells) == filled_cells;
     unique?(t, result)
   end
